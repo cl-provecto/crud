@@ -4,9 +4,9 @@
 
 @import 'topo.css';
 
-:root {
+/* :root {
 
-}
+} */
 
 .btnPadrao {
     display: flex;
@@ -15,3 +15,19 @@
     border-radius: 6px;
 }
 
+.campoForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.campoForm label {
+    font-size: larger;
+}
+
+.campoForm input {
+    border: 1px solid #888;
+    padding: 3px;
+    border-radius: 3px;
+}
