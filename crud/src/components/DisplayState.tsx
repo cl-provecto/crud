@@ -5,16 +5,9 @@ interface DisplayStateProps {
 
 export default function DisplayState(props:DisplayStateProps) {
 
-    function add() {
-        //setCont(cont ++)
+    function operacao(op:number) {
         let c = props.valor
-        c ++
-        props.fvalor(c)
-    }
-    function sub() {
-        //setCont(cont ++)
-        let c = props.valor
-        c --
+        c += op
         props.fvalor(c)
     }
 
@@ -24,8 +17,8 @@ export default function DisplayState(props:DisplayStateProps) {
                 {props.valor}
             </div>
             <div className="flex gap-5">
-                <button className="btnPadrao" onClick={add}>Adicionar</button>
-                <button className="btnPadrao" onClick={sub}>Subtrair</button>
+                <button className="btnPadrao" onClick={() => operacao(1)}>Adicionar</button>
+                <button className="btnPadrao" onClick={() => operacao(-1)}>Subtrair</button>
             </div>
         </div>
     )
