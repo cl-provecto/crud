@@ -14,7 +14,16 @@ export default function Inputs() {
             </div>
             <div className="campoForm">
                 <label>Curso:</label>
-                <input type="text" value={curso} onChange={(evt) => setCurso(evt.target.value)}/>
+                <select value={curso} onChange={(evt) => setCurso(evt.target.value)}>
+                    <option value=""></option>
+                    <option value="HTML">HTML</option>
+                    <option value="React">React</option>
+                    <option value="C++">C++</option>
+                    <option value="Javascript">Javascript</option>
+                    <option value="Arduino">Arduino</option>
+                    <option value="CSS">CSS</option>
+                    <option value="Next.js">Next.js</option>
+                </select>
             </div>
             <div>
                 Nome Digitado: {nome}
