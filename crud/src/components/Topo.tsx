@@ -21,6 +21,7 @@ export default function Topo() {
                 }>Produtos</Link>
                 <Link href={"/teste"}>Teste</Link>
                 <Link href={"/hooks/usestate"}>State</Link>
+                <Link href={"/hooks/useeffect"}>Effect</Link>
             </nav>
         </div>
     )

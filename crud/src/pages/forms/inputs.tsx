@@ -1,11 +1,21 @@
 import { useState } from "react"
 import Topo from "@/components/Topo"
 
-const cursos = ["HTML", "React", "C++", "Javascript", "Arduino", "CSS", "Next.js"]
+const cursos = ["", "HTML", "React", "C++", "Javascript", "Arduino", "CSS", "Next.js"]
 
 export default function Inputs() {
     const [nome, setNome] = useState<string>("")
     const [curso, setCurso] = useState<string>("")
+
+    function fcursos() {
+        return cursos.map((c:any, index:number) => {
+            return <option key={index} value={c}>{c}</option>
+        })
+    }
+
+    const ccursos = cursos.map((c:any, index:number) => {
+        return <option key={index} value={c}>{c}</option>
+    })
 
     return (
         <div>
@@ -18,10 +28,12 @@ export default function Inputs() {
                 <label>Curso:</label>
                 <select value={curso} onChange={(evt) => setCurso(evt.target.value)}>
                     {
-                        cursos.map((c:any, index:number) => {
-                            //return <option key={index} value={c}>{`Curso de ${c}`}</option>
-                            return <option key={index} value={c}>Curso de: {c}</option>
-                        })
+                        // cursos.map((c:any, index:number) => {
+                        //     //return <option key={index} value={c}>{`Curso de ${c}`}</option>
+                        //     return <option key={index} value={c}>Curso de: {c}</option>
+                        // })
+                        //fcursos()
+                        ccursos
                     }
                 </select>
             </div>
